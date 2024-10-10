@@ -11,6 +11,7 @@ import kotlin.io.path.notExists
 
 object EmployeesWriter {
 
+    private val operations = Operations()
 
     private val docBuilderFactory: DocumentBuilderFactory = DocumentBuilderFactory.newInstance()
     private val docBuilder: DocumentBuilder = docBuilderFactory.newDocumentBuilder()
@@ -21,7 +22,7 @@ object EmployeesWriter {
      * de los empleados
      *
      * @param xmlPath Ruta del fichero xml
-     *@param employees Lista de empleados
+     * @param employees Lista de empleados
      */
     fun writeEmployeesXML(xmlPath: Path, employees: List<Employee>) {
 
@@ -61,6 +62,34 @@ object EmployeesWriter {
 
         transformer.setOutputProperty(OutputKeys.INDENT, "yes")
         transformer.transform(source, result)
+    }
+
+
+    /** Cambia el salario de un empleado y actualiza la lista de empleados y el xml
+     *
+     * @param id id del empleado a actualizar
+     * @param xmlPath ruta del fichero xml
+     * @param employees lista de empleados
+     */
+    fun updateSalaryById(id: Int, xmlPath: Path, employees: List<Employee>) {
+        val employee = employees.find{ it.id == id }
+
+        if (employee == null) {
+            throw IllegalArgumentException("- El empleado no existe")
+        }
+
+        if (xmlPath.notExists()) {
+            throw IllegalArgumentException("- No existe ningun archivo XML de empleados")
+        }
+
+        try {
+            employee.salary = operations.createNewSalary()
+            writeEmployeesXML(xmlPath, employees)
+        } catch (e: Exception) {
+            throw Exception("- Ocurrió un fallo a la hora de actualizar el salario")
+        }
+
+        Console.showMessage("Salario actualizado")
     }
 
 }

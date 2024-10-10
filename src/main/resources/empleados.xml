@@ -8,7 +8,7 @@
     <empleado id="2">
         <apellido>Perez</apellido>
         <departamento>HR</departamento>
-        <salario>2500.0</salario>
+        <salario>69.0</salario>
     </empleado>
     <empleado id="3">
         <apellido>López</apellido>

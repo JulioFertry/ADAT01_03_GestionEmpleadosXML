@@ -42,5 +42,14 @@ object EmployeesReader {
     }
 
 
+    /** Lee un fichero con la información de los empleados y devuelve una lista de empleados
+     *
+     * @param xmlPath Ruta del fichero xml
+     *
+     * @return Lista de empleados
+     */
+    fun getEmployeesFromXML(xmlPath: Path): List<Employee> {
+        TODO()
+    }
 
 }

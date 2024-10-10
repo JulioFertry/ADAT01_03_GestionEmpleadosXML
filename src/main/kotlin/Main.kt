@@ -1,3 +1,4 @@
+import java.io.Writer
 import java.nio.file.Path
 
 fun main() {
@@ -15,27 +16,36 @@ fun main() {
     try {
         // Lee el csv rellena la lista de empleados
         employees = EmployeesReader.getEmployeesFromCSV(employeeCSV)
+        // Muestra todos los empleados
+        Console.showEmployees(employees)
+
     } catch (e: IllegalArgumentException) {
-        println("*** ERROR *** $e")
+        println("*** ERROR *** - $e")
     } catch (e: IndexOutOfBoundsException) {
-        println("*** ERROR *** - el formato del csv es incorrecto ($e)")
+        println("*** ERROR *** - el formato del csv es incorrecto - ($e)")
     } catch (e: Exception) {
-        println("*** ERROR *** - ha ocurrido un error inesperado ($e)")
-    }
-
-
-    // Mostramos todos los empleados
-    employees.forEach { employee ->
-        Console.showMessage(employee.toString())
+        println("*** ERROR *** - ha ocurrido un error inesperado - ($e)")
     }
 
 
     try {
-        // Escribimos los datos de los empleados en un XML
+        // Guarda los datos de los empleados en un XML
         EmployeesWriter.writeEmployeesXML(employeeXML, employees)
     } catch (e: Exception) {
         println("*** ERROR *** - $e")
     }
+
+
+    try {
+        // Actualiza el salario
+        EmployeesWriter.updateSalaryById(2, employeeXML, employees)
+        Console.showEmployees(employees)
+    } catch (e: Exception) {
+        ("*** ERROR *** - $e")
+    }
+
+
+
 
 
 }

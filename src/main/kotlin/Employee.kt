@@ -2,14 +2,11 @@ data class Employee(
     val id: Int,
     val surname: String,
     val department: String,
-    val salary: Float
+    var salary: Float
 ) {
 
     override fun toString(): String {
-        return "ID: $id\n" +
-                "   apellido: $surname\n" +
-                "   departamento: $department\n" +
-                "   salario: $salary"
+        return "ID: 10$id, Apellido: $surname, Departamento: $department, Salario: $salary\n"
     }
 
 }
