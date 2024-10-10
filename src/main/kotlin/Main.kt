@@ -9,10 +9,11 @@ fun main() {
     // Rutas necesarias
     val root = Path.of("src")
     val employeeCSV = root.resolve("main").resolve("resources").resolve("empleados.csv")
+    val employeeXML =root.resolve("main").resolve("resources").resolve("empleados.xml")
 
 
-    // Lee el csv rellena la lista de empleados
     try {
+        // Lee el csv rellena la lista de empleados
         employees = EmployeesReader.getEmployeesFromCSV(employeeCSV)
     } catch (e: IllegalArgumentException) {
         println("*** ERROR *** $e")
@@ -22,9 +23,18 @@ fun main() {
         println("*** ERROR *** - ha ocurrido un error inesperado ($e)")
     }
 
+
     // Mostramos todos los empleados
     employees.forEach { employee ->
         Console.showMessage(employee.toString())
+    }
+
+
+    try {
+        // Escribimos los datos de los empleados en un XML
+        EmployeesWriter.writeEmployeesXML(employeeXML, employees)
+    } catch (e: Exception) {
+        println("*** ERROR *** - $e")
     }
 
 

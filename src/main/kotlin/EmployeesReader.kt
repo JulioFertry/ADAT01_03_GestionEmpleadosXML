@@ -4,6 +4,13 @@ import java.nio.file.Path
 
 object EmployeesReader {
 
+
+    /** Lee un fichero con la información de los empleados y devuelve una lista de empleados
+     *
+     * @param csvPath Ruta del fichero csv
+     *
+     * @return Lista de empleados
+     */
     fun getEmployeesFromCSV(csvPath: Path): List<Employee> {
         if (Files.notExists(csvPath)) {
             throw IllegalArgumentException("- No existe el archivo")

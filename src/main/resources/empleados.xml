@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<empleados>
+    <empleado id="1">
+        <apellido>Garcia</apellido>
+        <departamento>IT</departamento>
+        <salario>3000.0</salario>
+    </empleado>
+    <empleado id="2">
+        <apellido>Perez</apellido>
+        <departamento>HR</departamento>
+        <salario>2500.0</salario>
+    </empleado>
+    <empleado id="3">
+        <apellido>López</apellido>
+        <departamento>Finance</departamento>
+        <salario>3200.0</salario>
+    </empleado>
+    <empleado id="4">
+        <apellido>Moreno</apellido>
+        <departamento>Marketing</departamento>
+        <salario>2900.0</salario>
+    </empleado>
+    <empleado id="5">
+        <apellido>Ramirez</apellido>
+        <departamento>Sales</departamento>
+        <salario>2800.0</salario>
+    </empleado>
+    <empleado id="6">
+        <apellido>Hernandez</apellido>
+        <departamento>IT</departamento>
+        <salario>3500.0</salario>
+    </empleado>
+    <empleado id="7">
+        <apellido>Gomez</apellido>
+        <departamento>HR</departamento>
+        <salario>2400.0</salario>
+    </empleado>
+    <empleado id="8">
+        <apellido>Molina</apellido>
+        <departamento>Finance</departamento>
+        <salario>3300.0</salario>
+    </empleado>
+    <empleado id="9">
+        <apellido>Blanco</apellido>
+        <departamento>Marketing</departamento>
+        <salario>3100.0</salario>
+    </empleado>
+    <empleado id="10">
+        <apellido>Fernandez</apellido>
+        <departamento>Sales</departamento>
+        <salario>2700.0</salario>
+    </empleado>
+    <empleado id="11">
+        <apellido>Sanchez</apellido>
+        <departamento>IT</departamento>
+        <salario>4000.0</salario>
+    </empleado>
+    <empleado id="12">
+        <apellido>Ruiz</apellido>
+        <departamento>HR</departamento>
+        <salario>2600.0</salario>
+    </empleado>
+    <empleado id="13">
+        <apellido>Martinez</apellido>
+        <departamento>Finance</departamento>
+        <salario>3400.0</salario>
+    </empleado>
+    <empleado id="14">
+        <apellido>Ortega</apellido>
+        <departamento>Marketing</departamento>
+        <salario>2950.0</salario>
+    </empleado>
+    <empleado id="15">
+        <apellido>Vega</apellido>
+        <departamento>Sales</departamento>
+        <salario>2850.0</salario>
+    </empleado>
+    <empleado id="16">
+        <apellido>Mendez</apellido>
+        <departamento>IT</departamento>
+        <salario>3750.0</salario>
+    </empleado>
+    <empleado id="17">
+        <apellido>Delgado</apellido>
+        <departamento>HR</departamento>
+        <salario>2550.0</salario>
+    </empleado>
+    <empleado id="18">
+        <apellido>Castillo</apellido>
+        <departamento>Finance</departamento>
+        <salario>3500.0</salario>
+    </empleado>
+    <empleado id="19">
+        <apellido>Benitez</apellido>
+        <departamento>Marketing</departamento>
+        <salario>3000.0</salario>
+    </empleado>
+    <empleado id="20">
+        <apellido>Alvarez</apellido>
+        <departamento>Sales</departamento>
+        <salario>2750.0</salario>
+    </empleado>
+</empleados>
