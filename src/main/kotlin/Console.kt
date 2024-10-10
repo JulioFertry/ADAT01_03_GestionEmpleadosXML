@@ -6,7 +6,7 @@ object Console {
 
     fun showEmployees(employees: List<Employee>) {
         employees.forEach { employee ->
-            Console.showMessage(employee.toString())
+            println(employee.toString())
         }
     }
 
